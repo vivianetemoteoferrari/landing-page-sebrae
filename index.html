@@ -30,28 +30,33 @@
 
     <header class="container">
         <a href="#hero" aria-label="Ir para a página inicial">
-            <img src="logo.svg" alt="Logo" class="logo">
+            <img src="/images/logo-sebrae.png" alt="Logo" class="logo">
         </a>
         <nav>
+            <!-- Menu hambúrguer -->
             <div class="hamburguer-menu" id="hamburguer-menu" aria-label="Menu de navegação" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+
+            <!-- Menu desktop -->
             <ul class="navbar desktop-menu">
                 <li><a href="#">Soluções perto de você</a></li>
                 <li>
-                    <button class="whatsapp-button">
-                        <img src="whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+                    <button type="button" class="whatsapp-button-header">
+                        <img src="/images/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
                         0800 570 0800
                     </button>
                 </li>
             </ul>
-            <ul class="mobile-menu  navbar" id="navbar">
+
+            <!-- Menu mobile -->
+            <ul class="navbar mobile-menu" id="navbar">
                 <li><a href="#">Soluções perto de você</a></li>
                 <li>
-                    <button class="whatsapp-button">
-                        <img src="whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+                    <button type="button" class="whatsapp-button-header">
+                        <img src="/images/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
                         0800 570 0800
                     </button>
                 </li>
@@ -76,40 +81,48 @@
                     <p>Esse é um ponto importante para:</p>
                     <div class="grid-form">
                         <div class="grid-item">
-                            <span class="features-item"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.02945 8.05853L7.73236 15.0321L17.0393 2.04732" stroke="#0041D9"
-                                        stroke-width="4" />
-                                </svg>
-                                <p>aumentar seu lucro;</p>
-                            </span>
+                            <p>
+                                <span class="features-item"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.02945 8.05853L7.73236 15.0321L17.0393 2.04732" stroke="#0041D9"
+                                            stroke-width="4" />
+                                    </svg>
+                                    aumentar seu lucro;
+                                </span>
+                            </p>
                         </div>
                         <div class="grid-item">
-                            <span class="features-item"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.02945 8.05853L7.73236 15.0321L17.0393 2.04732" stroke="#0041D9"
-                                        stroke-width="4" />
-                                </svg>
-                                <p>atrair novos clientes;</p>
-                            </span>
+                            <p>
+                                <span class="features-item"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.02945 8.05853L7.73236 15.0321L17.0393 2.04732" stroke="#0041D9"
+                                            stroke-width="4" />
+                                    </svg>
+                                    atrair novos clientes;
+                                </span>
+                            </p>
                         </div>
                         <div class="grid-item">
-                            <span class="features-item"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.02945 8.05853L7.73236 15.0321L17.0393 2.04732" stroke="#0041D9"
-                                        stroke-width="4" />
-                                </svg>
-                                <p>fidelizar seu público;</p>
-                            </span>
+                            <p>
+                                <span class="features-item"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.02945 8.05853L7.73236 15.0321L17.0393 2.04732" stroke="#0041D9"
+                                            stroke-width="4" />
+                                    </svg>
+                                    fidelizar seu público;
+                                </span>
+                            </p>
                         </div>
                         <div class="grid-item">
-                            <span class="features-item"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.02945 8.05853L7.73236 15.0321L17.0393 2.04732" stroke="#0041D9"
-                                        stroke-width="4" />
-                                </svg>
-                                <p>evitar prejuízos financeiros.</p>
-                            </span>
+                            <p>
+                                <span class="features-item"><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.02945 8.05853L7.73236 15.0321L17.0393 2.04732" stroke="#0041D9"
+                                            stroke-width="4" />
+                                    </svg>
+                                    evitar prejuízos financeiros.
+                                </span>
+                            </p>
                         </div>
 
                     </div>
@@ -143,7 +156,9 @@
                             <div>
                                 <button type="button" id="next-button">Próximo</button>
                             </div>
+
                         </div>
+
                         <div class="form-step" aria-labelledby="business-data">
                             <input type="text" id="cpf-cnpj" placeholder="CPF/CNPJ" required>
                             <div class="error-message" id="cpf-cnpj-error">CPF inválido.</div>
@@ -173,11 +188,12 @@
                                     <button type="button" id="prev-button">Anterior</button>
                                     <button type="submit" id="submit-button">Enviar</button>
                                 </div>
-                                <div id="step-indicator">
-                                    <p>1 de 2</p>
-                                </div>
-                            </div>
 
+                            </div>
+                        </div>
+                        <div id="step-indicator">
+                            <p>1 de 2</p>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -224,7 +240,7 @@
                         houver mudanças nos custos.</p>
                 </div>
                 <div class="button-container">
-                    <button class="action-button">Baixar Planilha</button>
+                    <button type="button" class="action-button">Baixar Planilha</button>
                 </div>
             </section>
         </div>
@@ -233,19 +249,19 @@
             <section>
                 <div class="image-text">
                     <div class="image-container">
-                        <img src="images/imagem-final-section.png" alt="Imagem de mulher cabelereira">>
+                        <img src="images/imagem-final-section.png" alt="Imagem de mulher cabelereira">
                     </div>
                     <div class="text-container">
                         <h3>Por que a formação de preço é importante para o seu negócio?</h3>
                         <p>O preço do seu produto ou serviço é um dos aspectos básicos para garantir o aumento das
                             vendas e o sucesso do seu negócio. Por isso, precisa ser calculado corretamente, levando em
                             consideração alguns fatores, como custos da empresa, concorrência, objetivos de lucro e
-                            demanda. </p>
+                            demanda.</p>
 
                         <p>Um preço mal formulado pode trazer prejuízos financeiros e perda de competitividade, pois é
                             um ponto que pode determinar a escolha da sua empresa pelo cliente. Com a nossa Planilha de
                             Formação de Preço, você terá uma ferramenta essencial para precificar corretamente seus
-                            produtos ou serviços. </p>
+                            produtos ou serviços.</p>
 
                         <p>Baixe agora e garanta o sucesso de vendas na sua empresa!
                         </p>
@@ -253,7 +269,7 @@
                 </div>
                 <div class="cta-section">
                     <div class="button-container">
-                        <button class="action-button">Baixar Planilha</button>
+                        <button type="button" class="action-button">Baixar Planilha</button>
                     </div>
                     <div class="svg-container">
                         <svg viewBox="0 0 777 293" xmlns="http://www.w3.org/2000/svg"
@@ -261,9 +277,8 @@
                             <path
                                 d="M776.369 30.0754L776.859 30.174L776.979 29.5754H776.369V30.0754ZM688.165 30.0754L687.674 29.9771L687.554 30.5754H688.165V30.0754ZM730.086 260.234V260.734H730.495L730.576 260.333L730.086 260.234ZM629.026 260.234V259.734H628.615L628.535 260.137L629.026 260.234ZM622.719 292V292.5H623.129L623.209 292.097L622.719 292ZM118 292L117.51 291.903L117.391 292.5H118V292ZM124.307 260.234L124.798 260.332L124.916 259.734H124.307V260.234ZM1 260.234L0.509813 260.136L0.389445 260.734H1V260.234ZM47.2831 30.0754V29.5754H46.8736L46.7929 29.9769L47.2831 30.0754ZM128.227 30.0754V30.5754H128.637L128.717 30.1738L128.227 30.0754ZM134.062 1V0.5H133.653L133.572 0.901615L134.062 1ZM694 1L694.49 1.09839L694.61 0.5H694V1ZM776.369 29.5754H688.165V30.5754H776.369V29.5754ZM730.576 260.333L776.859 30.174L775.878 29.9769L729.595 260.136L730.576 260.333ZM629.026 260.734H730.086V259.734H629.026V260.734ZM628.535 260.137L622.228 291.903L623.209 292.097L629.516 260.332L628.535 260.137ZM622.719 291.5H118V292.5H622.719V291.5ZM118.49 292.097L124.798 260.332L123.817 260.137L117.51 291.903L118.49 292.097ZM1 260.734H124.307V259.734H1V260.734ZM46.7929 29.9769L0.509813 260.136L1.49019 260.333L47.7732 30.174L46.7929 29.9769ZM128.227 29.5754H47.2831V30.5754H128.227V29.5754ZM128.717 30.1738L134.553 1.09839L133.572 0.901615L127.737 29.9771L128.717 30.1738ZM134.062 1.5H694V0.5H134.062V1.5ZM693.51 0.901615L687.674 29.9771L688.655 30.1738L694.49 1.09839L693.51 0.901615Z"
                                 fill="white" />
-                            <text x="50%" y="20%" text-anchor="middle" fill="#fff" font-size="40">
-                                Por que o Sebrae?
-                            </text>
+                            <text x="50%" y="20%" text-anchor="middle" fill="#fff" font-size="30" font-weight="700">Por
+                                que o Sebrae?</text>
                             <text x="50%" y="30%" text-anchor="middle" fill="#fff" font-size="20">
                                 <tspan x="50%" dy="1.2em">Na sua jornada como empreendedor, nada melhor do que</tspan>
                                 <tspan x="50%" dy="1.2em">ter um parceiro que se preocupa com o crescimento</tspan>
@@ -285,17 +300,29 @@
 
     <footer class="container">
         <a href="#hero" aria-label="Ir para a página inicial">
-            <img src="logo.svg" alt="Logo" class="logo">
+            <img src="/images/Logo-branca-sebrae 1.png" alt="Logo Sebrae" class="logo">
         </a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="social-icons">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+        <div class="text-footer">
+            <p>Central de atendimento Sebrae
+                Soluções presenciais e on-line: 0800 570 0800.</p>
         </div>
-        <p>Entre em contato conosco!</p>
-        <button>Fale Conosco</button>
+        <div class="social-icons">
+            <a href="#"> <img src="/images/logo-youtube.svg" alt="Youtube Sebrar"> </a>
+            <a href="#"> <img src="/images/logo-instagram.svg" alt="Instagram Sebrae"> </a>
+            <a href="#"> <img src="/images/logo-facebook.svg" alt="Facebook Sebrae"> </a>
+            <a href="#"> <img src="/images/logo-x.svg" alt="Threads no X"> </a>
+            <a href="#"> <img src="/images/logo-linkedin.svg" alt="Linkedin "> </a>
+        </div>
+        <div class="text-footer">
+            <p>Sua opinião é essencial! Utilize o link da Ouvidoria
+                e nos ajude a melhorar sua experiência.</p>
+        </div>
+        <button type="button" class="whatsapp-button">
+            <img src="/images/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+            Fale conosco!
+        </button>
     </footer>
+    <div class="nota-footer container"><p><strong>Sebrae</strong> | A força do empreendedor brasileiro.</p></div>
 
     <script src="js/hamburger-bar.js"></script>
     <script src="js/validacao-cpf.js"></script>
