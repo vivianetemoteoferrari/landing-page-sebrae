@@ -3,7 +3,7 @@ const mobileNavbar = document.getElementById('navbar');
 
 
 menuToggle.addEventListener('click', () => {
-    mobileNavbar.classList.toggle('active'); 
+    mobileNavbar.classList.toggle('active');
 });
 
 
@@ -22,6 +22,6 @@ document.addEventListener('click', (event) => {
 
 
 menuToggle.addEventListener('click', () => {
-    console.log('Menu toggle clicado');  
+    console.log('Menu toggle clicado');
     mobileNavbar.classList.toggle('active');
 });
