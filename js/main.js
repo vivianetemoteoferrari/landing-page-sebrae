@@ -55,7 +55,7 @@ document.getElementById('next-button').addEventListener('click', function () {
 
     consentError.style.display = 'none';
 
-    
+
 
     if (!name) valid = false;
     if (!validacaoEmail(email)) {
