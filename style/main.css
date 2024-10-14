@@ -308,6 +308,7 @@
         display: flex;
         align-items: flex-start;
         margin-top: 10px;
+        width: 100%;
     }
 
     #step-indicator {
@@ -586,6 +587,13 @@
 
         .form-left {
             width: 85vw;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 10px;
+            width: 100%;
         }
 
         .grid-section {
