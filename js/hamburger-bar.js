@@ -1,5 +1,5 @@
-const menuToggle = document.querySelector('.hamburguer-menu');
-const mobileNavbar = document.querySelector('.navbar.mobile-menu');
+const menuToggle = document.getElementById('hamburguer-menu');
+const mobileNavbar = document.getElementById('navbar');
 
 menuToggle.addEventListener('click', () => {
     mobileNavbar.classList.toggle('active');
