@@ -1,29 +1,68 @@
+function validacaoEmail(field) {
+    let usuario = field.value.substring(0, field.value.indexOf("@"));
+    let dominio = field.value.substring(field.value.indexOf("@") + 1, field.value.length);
+
+    const dominiosInvalidos = ["exemplo.com", "teste.com", "dominio.com"];
+
+    if (dominiosInvalidos.includes(dominio)) {
+        document.getElementById("email-error").style.display = 'block';
+        return false;
+    }
+
+    if ((usuario.length >= 1) &&
+        (dominio.length >= 3) &&
+        (usuario.search("@") == -1) &&
+        (dominio.search("@") == -1) &&
+        (usuario.search(" ") == -1) &&
+        (dominio.search(" ") == -1) &&
+        (dominio.search(".") != -1) &&
+        (dominio.indexOf(".") >= 1) &&
+        (dominio.lastIndexOf(".") < dominio.length - 1)) {
+        document.getElementById("email-error").style.display = 'none';
+        return true;
+    } else {
+        document.getElementById("email-error").style.display = 'block';
+        return false;
+    }
+}
+
+
+function validacaoPhone(field) {
+    const phone = field.value.replace(/\D/g, '');
+
+
+    const isValid = phone.length >= 10 && phone.length <= 11 &&
+        !/(\d)\1{7,}/.test(phone);
+
+    if (isValid) {
+        document.getElementById("phone-error").style.display = 'none';
+        return true;
+    } else {
+        document.getElementById("phone-error").style.display = 'block';
+        return false;
+    }
+}
+
+
 document.getElementById('next-button').addEventListener('click', function () {
     const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const emailError = document.getElementById('email-error');
-    const phoneError = document.getElementById('phone-error');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
     const consentChecked = document.getElementById('data-consent').checked;
     const consentError = document.getElementById('consent-error');
 
     let valid = true;
 
-    emailError.style.display = 'none';
-    phoneError.style.display = 'none';
     consentError.style.display = 'none';
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phonePattern = /^\(\d{2}\) \d{5}-\d{4}$/;
+    
 
     if (!name) valid = false;
-    if (!email || !emailPattern.test(email)) {
+    if (!validacaoEmail(email)) {
         valid = false;
-        emailError.style.display = 'block';
     }
-    if (!phone || !phonePattern.test(phone)) {
+    if (!validacaoPhone(phone)) {
         valid = false;
-        phoneError.style.display = 'block';
     }
     if (!consentChecked) {
         valid = false;
@@ -42,6 +81,7 @@ document.getElementById('prev-button').addEventListener('click', function () {
     document.querySelector('.form-step:nth-child(1)').classList.add('form-step-active');
     document.getElementById('step-indicator').textContent = "1 de 2";
 });
+
 
 document.getElementById('multi-step-form').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -70,6 +110,7 @@ document.getElementById('multi-step-form').addEventListener('submit', function (
     }
     if (valid) {
         alert('Formulário enviado com sucesso!');
+        location.reload();
     }
 });
 
@@ -105,8 +146,6 @@ applyMask(document.getElementById('cpf-cnpj'), function (value) {
 
     return value;
 });
-
-
 
 applyMask(document.getElementById('phone'), function (value) {
     return value.replace(/\D/g, '')
